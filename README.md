@@ -1,11 +1,10 @@
 # Random Forest Classification
-This project involves implementing a Decision Tree algorithm from scratch to predict Titanic survival based on passenger features. It also explores enhancing model accuracy using Bagging techniques and Random Forests for improved classification performance.
+This project focuses on implementing a Decision Tree algorithm from scratch to predict Titanic survival outcomes based on various passenger features. Additionally, it explores enhancing model accuracy through Bagging techniques and Random Forests to achieve more robust classification performance.
 
-We start by performing preprocessing on these data and choosing features influential in our prediction. We initially, set the depth of the tree (number of features used for prediction) to 3.
+We begin by preprocessing the dataset and selecting features that are likely to influence survival predictions. Initially, we set the decision tree's depth (the number of features used for prediction) to 3 and use this as a baseline.
 
-We choose the criterion for feature selection. At each stage, we display the confusion matrix and the accuracy of the model.
 
-we test for 5 different values for the depth of the decision tree:
+We evaluate the model's performance by testing five different decision tree depths to observe their impact on accuracy and overfitting tendencies.
 
 Depth = 3:
 
@@ -66,6 +65,9 @@ def RandomForest(x_train, y_train, x_test, num_tree):
     y_predicted[i] = unique_vals[np.argmax(counts)]
   return y_predicted
 ```
+
+Testing with different number of trees:
+
 
 For num_tree = 3:
 
